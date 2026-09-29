@@ -49,6 +49,7 @@ const AboutRace = ({ evento }) => {
               className="about-race__imagen"
               src={imagenAbout}
               alt="Grupo de corredores en Yerba Buena, Tucumán"
+              decoding="async"
             />
           ) : null}
         </motion.div>

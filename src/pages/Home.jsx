@@ -12,6 +12,7 @@ import Sponsors from "../components/Sponsors";
 import FAQ from "../components/FAQ";
 import FinalCTA from "../components/FinalCTA";
 import Footer from "../components/Footer";
+import ScrollToTop from "../components/ScrollToTop";
 import "../css/home.css";
 
 const Home = () => {
@@ -32,6 +33,7 @@ const Home = () => {
         <FinalCTA evento={evento} />
       </main>
       <Footer evento={evento} />
+      <ScrollToTop />
     </>
   );
 };

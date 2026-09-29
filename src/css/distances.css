@@ -57,6 +57,7 @@
 .distances__item {
   display: flex;
   flex-direction: column;
+  min-width: 0;
   min-height: 100%;
   padding: 1.6rem 1.25rem 1.45rem;
   border-top: 4px solid var(--color-lime);

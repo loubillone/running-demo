@@ -1,6 +1,7 @@
 /* EventInfo — franja de transición bajo el Hero */
 
 .event-info {
+  position: relative;
   background-color: var(--color-lime);
   color: var(--color-dark);
 }

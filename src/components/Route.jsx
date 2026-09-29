@@ -38,6 +38,7 @@ const Route = ({ evento }) => {
                 className="route__imagen"
                 src={imagenCircuito}
                 alt="Circuito de Norte Run 2026 en Yerba Buena"
+                decoding="async"
               />
             ) : (
               <svg

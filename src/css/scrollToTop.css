@@ -1,0 +1,40 @@
+/* ScrollToTop */
+
+.scroll-to-top {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: 2px;
+  background-color: var(--color-lime);
+  color: var(--color-dark);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.scroll-to-top:hover {
+  background-color: #c8ff52;
+}
+
+.scroll-to-top:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 3px;
+}
+
+@media (min-width: 768px) {
+  .scroll-to-top {
+    right: 24px;
+    bottom: 24px;
+    width: 2.85rem;
+    height: 2.85rem;
+  }
+}

@@ -25,6 +25,8 @@ const Hero = ({ evento }) => {
           src={imagenHero}
           alt=""
           aria-hidden="true"
+          fetchPriority="high"
+          decoding="async"
         />
       ) : null}
       <motion.div

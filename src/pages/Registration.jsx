@@ -115,6 +115,12 @@ const Registration = () => {
     setErrores(siguientesErrores);
 
     if (Object.keys(siguientesErrores).length > 0) {
+      const primerCampo = Object.keys(siguientesErrores)[0];
+      const destino =
+        primerCampo === "distancia"
+          ? document.querySelector('input[name="distancia"]')
+          : document.getElementById(primerCampo);
+      destino?.focus();
       return;
     }
 
