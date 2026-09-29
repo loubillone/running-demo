@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
+import { motion } from "motion/react";
 import evento from "../data/eventoDemo";
+import { fadeUp } from "../motion";
 import "../css/registrationSuccess.css";
 
 const RegistrationSuccess = () => {
@@ -11,7 +13,12 @@ const RegistrationSuccess = () => {
 
   return (
     <main className="registration-success">
-      <div className="registration-success__inner">
+      <motion.div
+        className="registration-success__inner"
+        variants={fadeUp}
+        initial="hidden"
+        animate="visible"
+      >
         <p className="registration-success__kicker">{evento.nombre}</p>
         <h1 className="registration-success__titulo">
           ¡Inscripción recibida!
@@ -35,7 +42,7 @@ const RegistrationSuccess = () => {
             Otra inscripción
           </Link>
         </div>
-      </div>
+      </motion.div>
     </main>
   );
 };

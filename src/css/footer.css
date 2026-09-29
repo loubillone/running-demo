@@ -53,6 +53,7 @@
   letter-spacing: 0.06em;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.72);
+  transition: color 0.2s ease;
 }
 
 .footer__secciones a:hover,

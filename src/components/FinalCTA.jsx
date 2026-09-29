@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { motion } from "motion/react";
+import { fadeUp, viewportOnce } from "../motion";
 import "../css/finalCTA.css";
 
 const FinalCTA = ({ evento }) => {
@@ -8,7 +10,13 @@ const FinalCTA = ({ evento }) => {
 
   return (
     <section className="final-cta">
-      <div className="final-cta__inner">
+      <motion.div
+        className="final-cta__inner"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+      >
         <h2 className="final-cta__titulo">
           <span>Tu próximo desafío</span>
           <span>empieza acá</span>
@@ -17,7 +25,7 @@ const FinalCTA = ({ evento }) => {
         <Link to="/inscripcion" className="final-cta__boton">
           Inscribirme
         </Link>
-      </div>
+      </motion.div>
     </section>
   );
 };

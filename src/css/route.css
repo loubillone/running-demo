@@ -1,6 +1,6 @@
 /* Route
-   Mapa futuro: colocar src/assets/circuito.jpg
-   y descomentar background-image o el <img> del componente.
+   Usa src/assets/circuito.jpg si existe.
+   Si falta, se muestra el trazado ilustrativo de respaldo.
 */
 
 .route {
@@ -62,10 +62,6 @@
   min-height: 17.5rem;
   overflow: hidden;
   background-color: var(--color-dark);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* background-image: url("../assets/circuito.jpg"); */
 }
 
 .route__trazado {
@@ -96,11 +92,12 @@
 }
 
 .route__imagen {
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .route__lista {

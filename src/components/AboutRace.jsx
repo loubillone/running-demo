@@ -1,3 +1,6 @@
+import { motion } from "motion/react";
+import { imagenAbout } from "../assets/imagenes";
+import { fadeIn, fadeUp, viewportOnce } from "../motion";
 import "../css/aboutRace.css";
 
 const AboutRace = ({ evento }) => {
@@ -9,7 +12,13 @@ const AboutRace = ({ evento }) => {
   return (
     <section className="about-race" id="carrera">
       <div className="about-race__inner">
-        <div className="about-race__contenido">
+        <motion.div
+          className="about-race__contenido"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+        >
           <p className="about-race__kicker">La carrera</p>
           <h2 className="about-race__titulo">
             <span>Una carrera.</span>
@@ -20,27 +29,29 @@ const AboutRace = ({ evento }) => {
             <p className="about-race__dato">{lugar}</p>
             <p className="about-race__dato">{distancias}</p>
           </div>
-        </div>
+        </motion.div>
 
-        <div
+        <motion.div
           className="about-race__media"
-          role="img"
-          aria-label="Espacio reservado para una fotografía de corredores"
+          role={imagenAbout ? undefined : "img"}
+          aria-label={
+            imagenAbout
+              ? undefined
+              : "Espacio reservado para una fotografía de corredores"
+          }
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
         >
-          {/*
-            Foto futura:
-            1. Guardar la imagen en src/assets/about-carrera.jpg
-            2. Descomentar el import y el <img> de abajo.
-
-            import aboutCarrera from "../assets/about-carrera.jpg";
-
+          {imagenAbout ? (
             <img
               className="about-race__imagen"
-              src={aboutCarrera}
+              src={imagenAbout}
               alt="Grupo de corredores en Yerba Buena, Tucumán"
             />
-          */}
-        </div>
+          ) : null}
+        </motion.div>
       </div>
     </section>
   );

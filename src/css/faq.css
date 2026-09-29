@@ -62,6 +62,7 @@
   letter-spacing: 0.02em;
   line-height: 1.25;
   text-align: left;
+  transition: color 0.2s ease;
 }
 
 .faq__boton:hover {
@@ -80,16 +81,26 @@
   color: var(--color-lime);
 }
 
+.faq__panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.28s ease;
+}
+
+.faq__panel--abierto {
+  grid-template-rows: 1fr;
+}
+
+.faq__panel-inner {
+  overflow: hidden;
+}
+
 .faq__respuesta {
   max-width: 38rem;
   padding: 0 0 1.25rem;
   font-size: 0.98rem;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.72);
-}
-
-.faq__respuesta[hidden] {
-  display: none;
 }
 
 @media (min-width: 480px) {

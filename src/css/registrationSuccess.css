@@ -92,6 +92,8 @@
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 2px;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .registration-success__principal {
@@ -106,10 +108,14 @@
 
 .registration-success__principal:hover {
   color: var(--color-dark);
+  background-color: #c8ff52;
+  transform: translateY(-1px);
 }
 
 .registration-success__secundario:hover {
-  border-color: var(--color-white);
+  border-color: var(--color-lime);
+  color: var(--color-lime);
+  transform: translateY(-1px);
 }
 
 .registration-success__principal:focus-visible,
