@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { motion } from "motion/react";
 import evento from "../data/eventoDemo";
+import { fadeIn, fadeUp } from "../motion";
 import "../css/registration.css";
 
 const TALLES = ["XS", "S", "M", "L", "XL", "XXL"];
@@ -122,7 +124,12 @@ const Registration = () => {
   return (
     <main className="registration">
       <header className="registration__hero">
-        <div className="registration__hero-inner">
+        <motion.div
+          className="registration__hero-inner"
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+        >
           <Link to="/" className="registration__volver">
             ← Volver al evento
           </Link>
@@ -136,10 +143,15 @@ const Registration = () => {
             Completá el formulario para registrar tu participación en{" "}
             {evento.nombre}.
           </p>
-        </div>
+        </motion.div>
       </header>
 
-      <div className="registration__cuerpo">
+      <motion.div
+        className="registration__cuerpo"
+        variants={fadeIn}
+        initial="hidden"
+        animate="visible"
+      >
         <aside className="registration__resumen">
           <p className="registration__resumen-kicker">Resumen</p>
           <p className="registration__resumen-nombre">{evento.nombre}</p>
@@ -481,7 +493,7 @@ const Registration = () => {
             Enviar inscripción
           </button>
         </form>
-      </div>
+      </motion.div>
     </main>
   );
 };

@@ -202,6 +202,7 @@
 
 .distances__cta:hover {
   color: var(--color-dark);
+  background-color: #c8ff52;
   transform: translateY(-1px);
 }
 

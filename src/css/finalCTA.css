@@ -51,11 +51,12 @@
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 2px;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .final-cta__boton:hover {
   color: var(--color-lime);
+  background-color: #151d30;
   transform: translateY(-1px);
 }
 

@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+import { fadeUp, staggerList, viewportOnce } from "../motion";
 import "../css/kitPickup.css";
 
 const KitPickup = ({ retiroKit }) => {
@@ -14,14 +16,24 @@ const KitPickup = ({ retiroKit }) => {
         <p className="kit-pickup__kicker">Antes de correr</p>
         <h2 className="kit-pickup__titulo">Retiro de kit</h2>
 
-        <ul className="kit-pickup__lista">
+        <motion.ul
+          className="kit-pickup__lista"
+          variants={staggerList}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+        >
           {datos.map((dato) => (
-            <li key={dato.label} className="kit-pickup__item">
+            <motion.li
+              key={dato.label}
+              className="kit-pickup__item"
+              variants={fadeUp}
+            >
               <span className="kit-pickup__label">{dato.label}</span>
               <span className="kit-pickup__valor">{dato.valor}</span>
-            </li>
+            </motion.li>
           ))}
-        </ul>
+        </motion.ul>
       </div>
     </section>
   );

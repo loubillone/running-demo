@@ -63,10 +63,11 @@
   letter-spacing: 0.04em;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.82);
+  transition: color 0.2s ease;
 }
 
 .header__list a:hover {
-  color: var(--color-white);
+  color: var(--color-lime);
 }
 
 .header__list a:focus-visible {
@@ -86,10 +87,13 @@
   text-decoration: none;
   padding: 0.62rem 0.95rem;
   border-radius: 2px;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
 .header__cta:hover {
   color: var(--color-dark);
+  background-color: #c8ff52;
+  transform: translateY(-1px);
 }
 
 .header__cta:focus-visible {

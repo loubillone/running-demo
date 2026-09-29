@@ -28,6 +28,7 @@
   text-transform: uppercase;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.72);
+  transition: color 0.2s ease;
 }
 
 .registration__volver:hover {
@@ -204,10 +205,16 @@
   color: var(--color-dark);
   font-family: var(--font-body);
   font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .registration__campo input:focus-visible,
-.registration__campo select:focus-visible,
+.registration__campo select:focus-visible {
+  border-color: var(--color-dark);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(183, 255, 42, 0.45);
+}
+
 .registration__distancia:focus-within,
 .registration__check input:focus-visible {
   outline: 2px solid var(--color-lime);
@@ -217,6 +224,11 @@
 .registration__error {
   font-size: 0.8rem;
   color: #9b1c1c;
+}
+
+.registration__campo:has(.registration__error) input,
+.registration__campo:has(.registration__error) select {
+  border-color: #9b1c1c;
 }
 
 .registration__distancias {
@@ -242,6 +254,8 @@
   border: 1px solid rgba(11, 18, 32, 0.18);
   border-radius: 2px;
   cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .registration__distancia input {
@@ -316,10 +330,11 @@
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .registration__enviar:hover {
+  background-color: #c8ff52;
   transform: translateY(-1px);
 }
 

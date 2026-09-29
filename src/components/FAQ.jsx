@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { motion } from "motion/react";
+import { fadeUp, viewportOnce } from "../motion";
 import "../css/faq.css";
 
 const FAQ = ({ preguntas = [] }) => {
@@ -10,7 +12,13 @@ const FAQ = ({ preguntas = [] }) => {
 
   return (
     <section className="faq" id="faq">
-      <div className="faq__inner">
+      <motion.div
+        className="faq__inner"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+      >
         <p className="faq__kicker">Preguntas frecuentes</p>
         <h2 className="faq__titulo">Todo lo que necesitás saber</h2>
 
@@ -35,18 +43,23 @@ const FAQ = ({ preguntas = [] }) => {
                     </span>
                   </button>
                 </h3>
-                <p
+                <div
                   id={idRespuesta}
-                  className="faq__respuesta"
-                  hidden={!estaAbierta}
+                  className={`faq__panel${
+                    estaAbierta ? " faq__panel--abierto" : ""
+                  }`}
+                  role="region"
+                  aria-hidden={!estaAbierta}
                 >
-                  {item.respuesta}
-                </p>
+                  <div className="faq__panel-inner">
+                    <p className="faq__respuesta">{item.respuesta}</p>
+                  </div>
+                </div>
               </li>
             );
           })}
         </ul>
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+import { fadeUp, staggerList, viewportOnce } from "../motion";
 import "../css/sponsors.css";
 
 const Sponsors = ({ sponsors = [] }) => {
@@ -7,13 +9,23 @@ const Sponsors = ({ sponsors = [] }) => {
         <p className="sponsors__kicker">Nos acompañan</p>
         <h2 className="sponsors__titulo">Sponsors</h2>
 
-        <ul className="sponsors__list">
+        <motion.ul
+          className="sponsors__list"
+          variants={staggerList}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+        >
           {sponsors.map((sponsor) => (
-            <li key={sponsor.id} className="sponsors__item">
+            <motion.li
+              key={sponsor.id}
+              className="sponsors__item"
+              variants={fadeUp}
+            >
               {sponsor.nombre}
-            </li>
+            </motion.li>
           ))}
-        </ul>
+        </motion.ul>
       </div>
     </section>
   );

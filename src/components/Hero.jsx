@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import { motion } from "motion/react";
+import { imagenHero } from "../assets/imagenes";
+import { fadeUp } from "../motion";
 import "../css/hero.css";
 
 const Hero = ({ evento }) => {
@@ -12,8 +15,24 @@ const Hero = ({ evento }) => {
     .join(" · ");
 
   return (
-    <section className="hero" id="inicio">
-      <div className="hero__inner">
+    <section
+      className={`hero${imagenHero ? " hero--con-imagen" : ""}`}
+      id="inicio"
+    >
+      {imagenHero ? (
+        <img
+          className="hero__fondo"
+          src={imagenHero}
+          alt=""
+          aria-hidden="true"
+        />
+      ) : null}
+      <motion.div
+        className="hero__inner"
+        variants={fadeUp}
+        initial="hidden"
+        animate="visible"
+      >
         <p className="hero__kicker">{evento.nombre}</p>
 
         <h1 className="hero__titulo">
@@ -39,7 +58,7 @@ const Hero = ({ evento }) => {
             Ver recorrido
           </a>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
