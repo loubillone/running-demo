@@ -1,13 +1,137 @@
 /* Footer */
 
 .footer {
-  padding: 2rem 1.5rem;
   background-color: var(--color-dark);
   color: var(--color-white);
+  padding: 3rem 0 1.5rem;
 }
 
-.footer__links {
+.footer__inner {
+  display: grid;
+  gap: 2rem;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem 1.25rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer__nombre {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.footer__nombre::before {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 3px;
+  margin-bottom: 0.85rem;
+  background-color: var(--color-lime);
+}
+
+.footer__ubicacion {
+  margin-top: 0.65rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.footer__secciones,
+.footer__contacto {
   display: flex;
-  gap: 1rem;
-  margin: 1rem 0;
+  flex-wrap: wrap;
+  gap: 0.7rem 1.15rem;
+}
+
+.footer__secciones a,
+.footer__contacto a {
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.footer__secciones a:hover,
+.footer__contacto a:hover {
+  color: var(--color-lime);
+}
+
+.footer__secciones a:focus-visible,
+.footer__contacto a:focus-visible {
+  outline: 2px solid var(--color-lime);
+  outline-offset: 3px;
+}
+
+.footer__base {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding: 1.25rem 1.25rem 0;
+}
+
+.footer__credito,
+.footer__copy {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.footer__copy {
+  font-family: var(--font-display);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 480px) {
+  .footer__inner,
+  .footer__base {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 3.5rem 0 1.6rem;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1.3fr 1fr 0.9fr;
+    align-items: start;
+    gap: 2rem;
+    padding-inline: 2rem;
+    padding-bottom: 2.25rem;
+  }
+
+  .footer__secciones,
+  .footer__contacto {
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .footer__base {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 2rem;
+    padding-top: 1.35rem;
+  }
+
+  .footer__nombre {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    padding: 4rem 0 1.75rem;
+  }
+
+  .footer__inner {
+    gap: 3rem;
+  }
 }

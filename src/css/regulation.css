@@ -1,5 +1,115 @@
 /* Regulation */
 
 .regulation {
-  padding: 2.5rem 1.5rem;
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  padding: 3.5rem 0;
+}
+
+.regulation__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.regulation__kicker {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.regulation__kicker::before {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 3px;
+  margin-bottom: 0.75rem;
+  background-color: var(--color-lime);
+}
+
+.regulation__titulo {
+  margin-top: 0.5rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.15rem, 7vw, 3.75rem);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.regulation__texto {
+  max-width: 34rem;
+  margin-top: 0.95rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(11, 18, 32, 0.72);
+}
+
+.regulation__boton {
+  align-self: flex-start;
+  min-height: 3rem;
+  padding: 0.85rem 1.35rem;
+  background-color: var(--color-lime);
+  color: var(--color-dark);
+  border: 0;
+  border-radius: 2px;
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: transform 0.2s ease;
+}
+
+.regulation__boton:hover {
+  transform: translateY(-1px);
+}
+
+.regulation__boton:focus-visible {
+  outline: 2px solid var(--color-dark);
+  outline-offset: 3px;
+}
+
+@media (min-width: 480px) {
+  .regulation__inner {
+    padding-inline: 1.5rem;
+  }
+
+  .regulation__texto {
+    font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .regulation {
+    padding: 4.25rem 0;
+  }
+
+  .regulation__inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    padding-inline: 2rem;
+  }
+
+  .regulation__boton {
+    flex-shrink: 0;
+    min-width: 12rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .regulation {
+    padding: 4.75rem 0;
+  }
+
+  .regulation__inner {
+    gap: 4rem;
+  }
 }
