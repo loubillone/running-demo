@@ -1,0 +1,13 @@
+/* Footer */
+
+.footer {
+  padding: 2rem 1.5rem;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.footer__links {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}

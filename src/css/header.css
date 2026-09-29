@@ -1,0 +1,28 @@
+/* Header */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.header__nav {
+  display: flex;
+}
+
+.header__list {
+  display: flex;
+  gap: 1rem;
+}
+
+.header__cta {
+  background-color: var(--color-lime);
+  color: var(--color-dark);
+  border: 0;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}

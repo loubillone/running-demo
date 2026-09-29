@@ -1,0 +1,17 @@
+/* Distances */
+
+.distances {
+  padding: 2.5rem 1.5rem;
+}
+
+.distances__list {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.distances__cta {
+  display: inline-block;
+  margin-top: 0.75rem;
+  text-decoration: none;
+}

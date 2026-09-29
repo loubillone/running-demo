@@ -1,0 +1,21 @@
+/* Hero */
+
+.hero {
+  padding: 3rem 1.5rem;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.hero__acciones {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.hero__cta {
+  background-color: var(--color-lime);
+  color: var(--color-dark);
+  border: 0;
+  padding: 0.75rem 1.25rem;
+  text-decoration: none;
+}

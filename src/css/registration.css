@@ -1,0 +1,17 @@
+/* Registration */
+
+.registration {
+  padding: 2.5rem 1.5rem;
+}
+
+.registration__form {
+  display: grid;
+  gap: 1rem;
+  max-width: 32rem;
+  margin-top: 1.5rem;
+}
+
+.registration__campo {
+  display: grid;
+  gap: 0.25rem;
+}
