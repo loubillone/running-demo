@@ -32,9 +32,9 @@ const evento = {
   ],
 
   kit: [
-    "Número de corredor",
-    "Chip de cronometraje",
-    "Remera técnica",
+    "Remera oficial",
+    "Dorsal",
+    "Hidratación",
     "Medalla finisher",
   ],
 
