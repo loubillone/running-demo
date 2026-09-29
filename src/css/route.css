@@ -1,11 +1,221 @@
-/* Route */
+/* Route
+   Mapa futuro: colocar src/assets/circuito.jpg
+   y descomentar background-image o el <img> del componente.
+*/
 
 .route {
-  padding: 2.5rem 1.5rem;
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  padding: 3.75rem 0 4.25rem;
+}
+
+.route__inner {
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.route__kicker {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+.route__kicker::before {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 3px;
+  margin-bottom: 0.75rem;
+  background-color: var(--color-lime);
+}
+
+.route__titulo {
+  margin-top: 0.55rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.15rem, 7.5vw, 4.35rem);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.route__descripcion {
+  max-width: 32rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(11, 18, 32, 0.72);
+}
+
+.route__layout {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2.25rem;
 }
 
 .route__mapa {
-  min-height: 180px;
-  margin: 1.5rem 0;
-  background-color: var(--color-light);
+  position: relative;
+  min-height: 17.5rem;
+  overflow: hidden;
+  background-color: var(--color-dark);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-image: url("../assets/circuito.jpg"); */
+}
+
+.route__trazado {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.route__linea {
+  fill: none;
+  stroke: var(--color-lime);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.route__linea--larga {
+  stroke-width: 2.5;
+  opacity: 0.28;
+}
+
+.route__linea--corta {
+  stroke-width: 3.5;
+}
+
+.route__punto {
+  fill: var(--color-lime);
+}
+
+.route__imagen {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.route__lista {
+  display: flex;
+  flex-direction: column;
+}
+
+.route__item {
+  padding: 1.15rem 0 1.35rem;
+  border-top: 1px solid rgba(11, 18, 32, 0.12);
+}
+
+.route__item:last-child {
+  padding-bottom: 0;
+}
+
+.route__distancia {
+  font-family: var(--font-display);
+  font-size: clamp(3.4rem, 16vw, 5.75rem);
+  font-weight: 700;
+  line-height: 0.8;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.route__dato {
+  margin-top: 0.45rem;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(11, 18, 32, 0.62);
+}
+
+@media (min-width: 375px) {
+  .route {
+    padding: 4rem 0 4.5rem;
+  }
+
+  .route__mapa {
+    min-height: 19rem;
+  }
+}
+
+@media (min-width: 480px) {
+  .route__inner {
+    padding-inline: 1.5rem;
+  }
+
+  .route__descripcion {
+    font-size: 1.05rem;
+  }
+
+  .route__mapa {
+    min-height: 21rem;
+  }
+
+  .route__dato {
+    font-size: 0.82rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .route {
+    padding: 4.75rem 0 5.25rem;
+  }
+
+  .route__inner {
+    padding-inline: 2rem;
+  }
+
+  .route__layout {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    align-items: stretch;
+    gap: 2.25rem;
+    margin-top: 2.75rem;
+  }
+
+  .route__lista {
+    min-height: 100%;
+  }
+
+  .route__mapa {
+    min-height: 26rem;
+  }
+
+  .route__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    padding: 1.4rem 0;
+  }
+
+  .route__distancia {
+    font-size: clamp(3.8rem, 7vw, 5.5rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .route {
+    padding: 5.5rem 0 5.75rem;
+  }
+
+  .route__layout {
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+    gap: 3.5rem;
+  }
+
+  .route__mapa {
+    min-height: 32rem;
+  }
+
+  .route__descripcion {
+    font-size: 1.08rem;
+  }
 }
