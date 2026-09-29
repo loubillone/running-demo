@@ -1,5 +1,5 @@
 /* Hero
-   Usa src/assets/hero.jpg si existe.
+   Usa src/assets/hero.* (avif, webp, jpg, png) si existe.
    Si falta, se mantiene el fondo oscuro.
 */
 
@@ -21,7 +21,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center 28%;
   z-index: 0;
 }
 
@@ -226,6 +226,10 @@
 @media (min-width: 768px) {
   .hero {
     padding: 7.5rem 0 4.5rem;
+  }
+
+  .hero__fondo {
+    object-position: center;
   }
 
   .hero__inner {

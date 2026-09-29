@@ -32,21 +32,35 @@ const Footer = ({ evento }) => {
           </ul>
         </nav>
 
-        <ul className="footer__contacto">
+        <ul className="footer__contacto" id="contacto">
           <li>
-            <a href="#">Instagram</a>
+            <a href="#contacto" aria-label="Instagram (demostración)">
+              Instagram
+            </a>
           </li>
           <li>
-            <a href="#">WhatsApp</a>
+            <a href="#contacto" aria-label="WhatsApp (demostración)">
+              WhatsApp
+            </a>
           </li>
           <li>
-            <a href="#">Email</a>
+            <a href="mailto:demo@norterun.com">Email</a>
           </li>
         </ul>
       </div>
 
       <div className="footer__base">
-        <p className="footer__credito">Demo desarrollada por REM Studio</p>
+        <p className="footer__credito">
+          Demo desarrollada por{" "}
+          <a
+            href="https://remstudio.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer__credito-enlace"
+          >
+            REM Studio
+          </a>
+        </p>
         <p className="footer__copy">
           © {anio} {nombreCorto}
         </p>

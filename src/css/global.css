@@ -22,15 +22,27 @@
   --font-body: Inter, system-ui, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: var(--font-body);
   background-color: var(--color-white);
   color: var(--color-dark);
   line-height: 1.5;
+  overflow-wrap: break-word;
 }
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -47,7 +59,17 @@ button {
   cursor: pointer;
 }
 
+h1,
+h2,
+h3 {
+  overflow-wrap: break-word;
+}
+
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   *,
   *::before,
   *::after {
