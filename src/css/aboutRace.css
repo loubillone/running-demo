@@ -1,5 +1,180 @@
-/* AboutRace */
+/* AboutRace
+   Foto futura: colocar src/assets/about-carrera.jpg
+   y descomentar background-image o el <img> del componente.
+*/
 
 .about-race {
-  padding: 2.5rem 1.5rem;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  padding: 3.75rem 0 4rem;
+}
+
+.about-race__inner {
+  display: grid;
+  gap: 2.25rem;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.about-race__kicker {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+.about-race__kicker::before {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 3px;
+  margin-bottom: 0.75rem;
+  background-color: var(--color-lime);
+}
+
+.about-race__titulo {
+  margin-top: 0.55rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.15rem, 8vw, 4.5rem);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.about-race__titulo span {
+  display: block;
+}
+
+.about-race__descripcion {
+  max-width: 32rem;
+  margin-top: 1.15rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(11, 18, 32, 0.72);
+}
+
+.about-race__destacados {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 1.75rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(11, 18, 32, 0.14);
+}
+
+.about-race__dato {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.about-race__media {
+  position: relative;
+  min-height: 16.5rem;
+  background-color: var(--color-dark);
+  background-image: linear-gradient(
+    145deg,
+    #0b1220 0%,
+    #151d30 48%,
+    #0b1220 100%
+  );
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-image: url("../assets/about-carrera.jpg"); */
+}
+
+.about-race__media::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--color-lime);
+}
+
+.about-race__imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 375px) {
+  .about-race {
+    padding: 4rem 0 4.25rem;
+  }
+
+  .about-race__media {
+    min-height: 18rem;
+  }
+}
+
+@media (min-width: 480px) {
+  .about-race__inner {
+    padding-inline: 1.5rem;
+  }
+
+  .about-race__descripcion {
+    font-size: 1.05rem;
+  }
+
+  .about-race__media {
+    min-height: 20rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-race {
+    padding: 4.75rem 0 5rem;
+  }
+
+  .about-race__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+    align-items: stretch;
+    gap: 2.5rem;
+    padding-inline: 2rem;
+  }
+
+  .about-race__contenido {
+    padding-bottom: 0.5rem;
+  }
+
+  .about-race__media {
+    min-height: 28rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-race {
+    padding: 5.5rem 0 5.75rem;
+  }
+
+  .about-race__inner {
+    gap: 4rem;
+  }
+
+  .about-race__contenido {
+    padding-top: 0.5rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .about-race__titulo {
+    font-size: clamp(3.4rem, 5.2vw, 4.5rem);
+  }
+
+  .about-race__descripcion {
+    margin-top: 1.4rem;
+    font-size: 1.08rem;
+  }
+
+  .about-race__media {
+    min-height: 34rem;
+  }
 }
